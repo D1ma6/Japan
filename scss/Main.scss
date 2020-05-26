@@ -1,0 +1,31 @@
+// imports
+@import "./preload";
+@import "./header";
+@import "./hero";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+
+  color: #1c1c1c;
+}
+
+// body
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+
+  background: #dcdcdc;
+  width: 100%;
+}
+
+// links
+a {
+  text-decoration: none;
+}
