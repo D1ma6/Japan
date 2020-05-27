@@ -39,8 +39,18 @@
 
       position: relative;
 
+      transition: transform 0.3s ease-in-out;
+
       &:hover {
         cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+
+        &::after {
+          transform: translateX(-50%);
+        }
+        &::before {
+          transform: translateX(50%);
+        }
       }
 
       &::before {
@@ -51,6 +61,8 @@
         position: absolute;
         bottom: 0;
         left: 0;
+
+        transition: transform 0.3s ease-in-out;
       }
       &::after {
         content: "";
@@ -60,6 +72,8 @@
         position: absolute;
         top: 0;
         right: 0;
+
+        transition: transform 0.3s ease-in-out;
       }
     }
   }
@@ -68,10 +82,11 @@
   &__right {
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    width: 754px;
     height: 600px;
     overflow: hidden;
+    padding: 0 22px 0 20px;
 
     // hero__right__container
     &__container {
@@ -89,13 +104,13 @@
       &:nth-of-type(3) {
         transform: translateY(4%);
         & img {
-          transform: translateX(-33.5%);
+          transform: translateX(-33.35%);
         }
       }
       &:nth-of-type(5) {
         transform: translateY(-2%);
         & img {
-          transform: translateX(-67%);
+          transform: translateX(-66.83%);
         }
       }
       &:hover {
@@ -110,17 +125,17 @@
       // hero__right__container-hover
       &-hover {
         transform: translateY(0%) !important;
-        overflow: visible;
+        // overflow: visible;
         z-index: 1;
 
         & img {
           opacity: 0.5;
-          transition: opacity 0.3s ease;
+          transition: opacity 0.4s ease;
         }
       }
 
       &__img {
-        width: 754px;
+        width: 756px;
         opacity: 1;
         pointer-events: none;
       }
@@ -128,7 +143,7 @@
 
     // hero__right__line
     &__line {
-      width: 2px;
+      width: 0.15rem;
       height: 80vh;
       background: #040404;
 

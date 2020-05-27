@@ -13,8 +13,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .preload__items {
@@ -57,11 +57,35 @@
   height: 400px;
   border-radius: 50%;
   background: #d41212;
+  -webkit-animation: flag 2s ease-in-out forwards;
+          animation: flag 2s ease-in-out forwards;
 }
 
 .preload-finish {
-  pointer-events: none;
+  pointer-events: none !important;
   opacity: 0;
+}
+
+@-webkit-keyframes flag {
+  from {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+  to {
+    -webkit-transform: translate(-190.2%, 0%) scale(0.4);
+            transform: translate(-190.2%, 0%) scale(0.4);
+  }
+}
+
+@keyframes flag {
+  from {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+  to {
+    -webkit-transform: translate(-190.2%, 0%) scale(0.4);
+            transform: translate(-190.2%, 0%) scale(0.4);
+  }
 }
 
 .header {
@@ -165,10 +189,28 @@
   border: none;
   background: none;
   position: relative;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .hero__left__button:hover {
   cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.hero__left__button:hover::after {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.hero__left__button:hover::before {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
 }
 
 .hero__left__button::before {
@@ -179,6 +221,10 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .hero__left__button::after {
@@ -189,6 +235,10 @@
   position: absolute;
   top: 0;
   right: 0;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .hero__right {
@@ -198,9 +248,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 754px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 600px;
   overflow: hidden;
+  padding: 0 22px 0 20px;
 }
 
 .hero__right__container {
@@ -226,8 +279,8 @@
 }
 
 .hero__right__container:nth-of-type(3) img {
-  -webkit-transform: translateX(-33.5%);
-          transform: translateX(-33.5%);
+  -webkit-transform: translateX(-33.35%);
+          transform: translateX(-33.35%);
 }
 
 .hero__right__container:nth-of-type(5) {
@@ -236,8 +289,8 @@
 }
 
 .hero__right__container:nth-of-type(5) img {
-  -webkit-transform: translateX(-67%);
-          transform: translateX(-67%);
+  -webkit-transform: translateX(-66.83%);
+          transform: translateX(-66.83%);
 }
 
 .hero__right__container:hover {
@@ -252,24 +305,23 @@
 .hero__right__container-hover {
   -webkit-transform: translateY(0%) !important;
           transform: translateY(0%) !important;
-  overflow: visible;
   z-index: 1;
 }
 
 .hero__right__container-hover img {
   opacity: 0.5;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
 }
 
 .hero__right__container__img {
-  width: 754px;
+  width: 756px;
   opacity: 1;
   pointer-events: none;
 }
 
 .hero__right__line {
-  width: 2px;
+  width: 0.15rem;
   height: 80vh;
   background: #040404;
   -webkit-box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
@@ -293,6 +345,23 @@ body {
   letter-spacing: 0.5px;
   background: #dcdcdc;
   width: 100%;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: #d41212;
+  -webkit-box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-240.5%, -50%) scale(0.4);
+          transform: translate(-240.5%, -50%) scale(0.4);
+  z-index: 5;
 }
 
 a {
