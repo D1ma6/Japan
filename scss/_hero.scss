@@ -6,6 +6,24 @@
   width: calc(100% - 120px);
   margin: 0 60px;
 
+  &::before {
+    content: "";
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: #d41212;
+
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
+
+    position: absolute;
+
+    top: 50vh;
+    left: 0;
+    transform: translate(-51%, -50%) scale(0.35);
+
+    z-index: 5;
+  }
+
   // hero__left
   &__left {
     display: flex;

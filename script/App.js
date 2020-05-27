@@ -7,7 +7,7 @@ function loadOn() {
   setInterval(() => {
     const preload = document.querySelector(".preload");
     preload.classList.add("preload-finish");
-  }, 2000);
+  }, 0);
 }
 
 imgContainer.forEach((img) => {

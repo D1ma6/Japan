@@ -1,0 +1,75 @@
+// culture
+.culture {
+  background-image: url("./../img/culture-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  z-index: -1;
+
+  display: flex;
+  flex-direction: column;
+
+  // culture__inner
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    margin: 0 0 0 117px;
+
+    position: relative;
+
+    &::after {
+      content: "";
+      height: 100vh;
+      width: 0.2px;
+      background: #fff;
+      position: absolute;
+      left: 160vh;
+      opacity: 0.2;
+    }
+  }
+
+  // culture__title
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+
+    position: relative;
+    margin: 0 0 0 45px;
+
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      width: 25px;
+      height: 2px;
+      background: #ec3b3b;
+      position: absolute;
+      left: -45px;
+    }
+  }
+  // culture__text
+  &__text {
+    font-size: 12px;
+    font-weight: 300;
+    color: #f2f2f2;
+    line-height: 18px;
+    margin: 30px 0 0 0;
+  }
+
+  // culture__container
+  &__container {
+    max-width: 700px;
+    margin: 10vh 0 0 0;
+  }
+
+  // culture__btn
+  &__btn {
+    margin: 5vh 0 0 0;
+  }
+}

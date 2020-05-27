@@ -72,8 +72,8 @@
             transform: translate(0%, 0%);
   }
   to {
-    -webkit-transform: translate(-190.2%, 0%) scale(0.4);
-            transform: translate(-190.2%, 0%) scale(0.4);
+    -webkit-transform: translate(-188.2%, 0%) scale(0.35);
+            transform: translate(-188.2%, 0%) scale(0.35);
   }
 }
 
@@ -83,8 +83,8 @@
             transform: translate(0%, 0%);
   }
   to {
-    -webkit-transform: translate(-190.2%, 0%) scale(0.4);
-            transform: translate(-190.2%, 0%) scale(0.4);
+    -webkit-transform: translate(-188.2%, 0%) scale(0.35);
+            transform: translate(-188.2%, 0%) scale(0.35);
   }
 }
 
@@ -123,6 +123,10 @@
   width: 400px !important;
 }
 
+.header__bottom__white {
+  color: #fff;
+}
+
 .header__logo {
   font-size: 16px;
   font-weight: 700;
@@ -154,6 +158,22 @@
   height: 100vh;
   width: calc(100% - 120px);
   margin: 0 60px;
+}
+
+.hero::before {
+  content: "";
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: #d41212;
+  -webkit-box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50vh;
+  left: 0;
+  -webkit-transform: translate(-51%, -50%) scale(0.35);
+          transform: translate(-51%, -50%) scale(0.35);
+  z-index: 5;
 }
 
 .hero__left {
@@ -328,6 +348,142 @@
           box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
 }
 
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.about__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 380px;
+}
+
+.about__item-top {
+  -webkit-transform: translateY(-28%);
+          transform: translateY(-28%);
+}
+
+.about__item-bottom {
+  -webkit-transform: translateY(28%);
+          transform: translateY(28%);
+}
+
+.about__item__container {
+  width: 150px;
+  height: 380px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__item__line {
+  width: 0.15rem;
+  height: 380px;
+  background: #040404;
+}
+
+.about__item__text {
+  width: 267px;
+  margin: 0 20px;
+}
+
+.culture {
+  background-image: url("./../img/culture-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.culture__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 700px;
+  margin: 0 0 0 117px;
+  position: relative;
+}
+
+.culture__inner::after {
+  content: "";
+  height: 100vh;
+  width: 0.2px;
+  background: #fff;
+  position: absolute;
+  left: 160vh;
+  opacity: 0.2;
+}
+
+.culture__title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #ffffff;
+  position: relative;
+  margin: 0 0 0 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.culture__title::before {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background: #ec3b3b;
+  position: absolute;
+  left: -45px;
+}
+
+.culture__text {
+  font-size: 12px;
+  font-weight: 300;
+  color: #f2f2f2;
+  line-height: 18px;
+  margin: 30px 0 0 0;
+}
+
+.culture__container {
+  max-width: 700px;
+  margin: 10vh 0 0 0;
+}
+
+.culture__btn {
+  margin: 5vh 0 0 0;
+}
+
 *,
 *::before,
 *::after {
@@ -348,23 +504,20 @@ body {
   position: relative;
 }
 
-body::before {
-  content: "";
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background: #d41212;
-  -webkit-box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
-          box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-240.5%, -50%) scale(0.4);
-          transform: translate(-240.5%, -50%) scale(0.4);
-  z-index: 5;
+body::-webkit-scrollbar {
+  display: none;
 }
 
 a {
   text-decoration: none;
+}
+
+.main {
+  overflow: hidden;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
 }
 /*# sourceMappingURL=Main.css.map */
