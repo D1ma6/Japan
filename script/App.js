@@ -6,13 +6,17 @@ window.addEventListener("load", () => {
 const imgContainer = document.querySelectorAll(".hero__right__container");
 const heroRight = document.querySelectorAll(".hero__right");
 
-heroRight.forEach((item) => {
-  imgContainer.forEach((img) => {
-    img.addEventListener("mouseover", () => {
-      img.classList.toggle("hero__right__container-hover");
-    });
-    img.addEventListener("mouseleave", () => {
-      img.classList.toggle("hero__right__container-hover");
-    });
+console.log(imgContainer);
+
+imgContainer.forEach((img) => {
+  img.addEventListener("mouseover", () => {
+    for (let i = 0; i < imgContainer.length; i++) {
+      imgContainer[i].classList.add("hero__right__container-hover");
+    }
+  });
+  img.addEventListener("mouseleave", () => {
+    for (let i = 0; i < imgContainer.length; i++) {
+      imgContainer[i].classList.remove("hero__right__container-hover");
+    }
   });
 });
