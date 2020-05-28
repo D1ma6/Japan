@@ -14,13 +14,19 @@ imgContainer.forEach((img) => {
   img.addEventListener("mouseover", () => {
     for (let i = 0; i < imgContainer.length; i++) {
       imgContainer[i].classList.add("hero__right__container-hover");
-      img.style.overflow = "visible";
+
+      img.style.zIndex = "3";
+      img.children[0].style.clipPath =
+        "polygon(0 0, 100% 0, 100% 100%, 0 100%)";
     }
   });
+
   img.addEventListener("mouseleave", () => {
     for (let i = 0; i < imgContainer.length; i++) {
       imgContainer[i].classList.remove("hero__right__container-hover");
-      img.style.overflow = "hidden";
+      img.children[0].style.clipPath = "";
+
+      img.style.zIndex = "1";
     }
   });
 });

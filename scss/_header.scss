@@ -7,6 +7,13 @@
   align-items: center;
 
   margin: 0 60px;
+  z-index: 1000;
+
+  &__white {
+    & * {
+      color: #fff !important;
+    }
+  }
 
   // header__top
   &__top {
@@ -33,11 +40,6 @@
       width: 400px !important;
 
       // header__bottom__navbar__link
-      &__link {
-      }
-    }
-    &__white {
-      color: #fff;
     }
   }
 
