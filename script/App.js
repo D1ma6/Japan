@@ -30,3 +30,15 @@ imgContainer.forEach((img) => {
     }
   });
 });
+
+const countryContainer = document.querySelector(".visit__place__country");
+const countryImg = document.querySelector(".visit__place__country__img");
+
+console.log;
+countryContainer.addEventListener("click", () => {
+  countryImg.style.transform = "scale(1.2)";
+  countryImg.style.transition = "transform 0.4s ease-in-out";
+});
+countryContainer.addEventListener("mouseleave", () => {
+  countryImg.style.transform = "scale(1)";
+});

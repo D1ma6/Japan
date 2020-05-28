@@ -4,6 +4,7 @@
 @import "./hero";
 @import "./about";
 @import "./culture";
+@import "./visit";
 
 *,
 *::before,
@@ -21,6 +22,8 @@ body {
   font-size: 12px;
   font-weight: 300;
   letter-spacing: 0.5px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   background: #dcdcdc;
   width: 100%;
