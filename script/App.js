@@ -34,11 +34,34 @@ imgContainer.forEach((img) => {
 const countryContainer = document.querySelector(".visit__place__country");
 const countryImg = document.querySelector(".visit__place__country__img");
 
-console.log;
 countryContainer.addEventListener("click", () => {
   countryImg.style.transform = "scale(1.2)";
   countryImg.style.transition = "transform 0.4s ease-in-out";
+  countryImg.style.zIndex = "10";
+  countryImg.style.position = "relative";
 });
 countryContainer.addEventListener("mouseleave", () => {
   countryImg.style.transform = "scale(1)";
+  countryImg.style.zIndex = "1";
 });
+
+const restaurantImg = document.querySelectorAll(
+  ".restaurant__visit__place__container__img"
+);
+
+restaurantImg.forEach((item) => {
+  item.addEventListener("click", () => {
+    item.style.transform = "scale(1.3)";
+    item.style.transition = "transform 0.4s ease-in-out";
+  });
+  item.addEventListener("mouseleave", () => {
+    item.style.transform = "scale(1)";
+  });
+});
+
+const restaurantSlide = document.querySelector(".monuments");
+const restaurantSection = document.querySelector(".monuments__container");
+
+const restaurantBtn = document.querySelector(".monuments__btn");
+
+let counter = 1;

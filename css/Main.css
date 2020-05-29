@@ -694,6 +694,346 @@
   content: "";
 }
 
+.restaurant {
+  background-image: url("./../img/restaurant-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.restaurant * {
+  color: #fff;
+}
+
+.restaurant::after {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+  position: absolute;
+}
+
+.restaurant__title {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 0 117px;
+}
+
+.restaurant__visit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.restaurant__visit__place {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 210px;
+  max-width: 1150px;
+  width: 100%;
+}
+
+.restaurant__visit__place:nth-child(1) {
+  margin: 30px 0 0 0;
+}
+
+.restaurant__visit__place:nth-child(2) {
+  margin: 80px 0 0 0;
+}
+
+.restaurant__visit__place__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 650px;
+}
+
+.restaurant__visit__place__description__title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.restaurant__visit__place__description__text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 25px 0 0 0;
+}
+
+.restaurant__visit__place__description__address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px 0 0 0;
+}
+
+.restaurant__visit__place__description__address * {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.restaurant__visit__place__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: inherit;
+}
+
+.restaurant__visit__place__container:hover {
+  cursor: pointer;
+}
+
+.restaurant__visit__place__container:hover::before {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.restaurant__visit__place__container:hover::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.restaurant__visit__place__container::before {
+  content: "";
+  width: 80px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+.restaurant__visit__place__container::after {
+  content: "";
+  width: 80px;
+  height: 2px;
+  background: #d41212;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+.restaurant__visit__place__container__img {
+  height: 176px;
+  width: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 2;
+  -webkit-box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.restaurant__visit__btn {
+  background: none;
+  border: none;
+  margin: 5vh 0 0 0;
+}
+
+.restaurant__visit__btn:hover {
+  cursor: pointer;
+}
+
+.monuments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 200%;
+}
+
+.monuments * {
+  color: #fff;
+}
+
+.monuments__container {
+  padding: 0 0 0 117px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.monuments__container-1 {
+  background-image: url("./../img/monuments-bg-1.jpg");
+}
+
+.monuments__container-2 {
+  background-image: url("./../img/monuments-bg-2.jpg");
+}
+
+.monuments__container__place {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.monuments__container__place__title {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.monuments__container__place__text {
+  font-weight: 300;
+  font-size: 12px;
+  color: #f2f2f2;
+  margin: 30px 0 0 0;
+  max-width: 800px;
+}
+
+.monuments__container__destination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px 0 0 0;
+}
+
+.monuments__container__destination__title {
+  font-size: 18px;
+  font-weight: 300;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.monuments__container__destination__title::before {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background: #ec3b3b;
+  margin: 0 20px 0 0;
+}
+
+.monuments__container__destination__text {
+  font-size: 12px;
+  font-weight: 300;
+  color: #f2f2f2;
+  margin: 30px 0 0 0;
+  max-width: 700px;
+}
+
+.monuments__container__address {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 0;
+  margin: 30px 0 0 0;
+  position: relative;
+}
+
+.monuments__container__address_container {
+  margin: 40px 0 0 0;
+}
+
+.monuments__container__address::before {
+  content: "";
+  width: 80px;
+  height: 1px;
+  background: #1c1c1c;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.monuments__container__address::after {
+  content: "";
+  width: 80px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.monuments__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: none;
+  border: none;
+  position: absolute;
+}
+
 *,
 *::before,
 *::after {

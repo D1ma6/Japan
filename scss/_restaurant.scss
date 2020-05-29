@@ -1,0 +1,174 @@
+// restaurant
+.restaurant {
+  background-image: url("./../img/restaurant-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  position: relative;
+
+  & * {
+    color: #fff;
+  }
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background: rgba($color: #000000, $alpha: 0.3);
+    z-index: -1;
+
+    position: absolute;
+  }
+
+  // restaurant__title
+  &__title {
+    font-size: 24px;
+    font-weight: 400;
+
+    margin: 0 0 0 117px;
+  }
+
+  // restaurant__visit
+  &__visit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    // restaurant__visit__place
+    &__place {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 210px;
+
+      max-width: 1150px;
+      width: 100%;
+
+      &:nth-child(1) {
+        margin: 30px 0 0 0;
+      }
+
+      &:nth-child(2) {
+        margin: 80px 0 0 0;
+      }
+
+      // restaurant__visit__place__description
+      &__description {
+        display: flex;
+        flex-direction: column;
+
+        max-width: 650px;
+
+        // restaurant__visit__place__description__title
+        &__title {
+          font-size: 16px;
+          font-weight: 500;
+        }
+
+        // restaurant__visit__place__description__text
+        &__text {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 1.3;
+
+          margin: 25px 0 0 0;
+        }
+
+        // restaurant__visit__place__description__address
+        &__address {
+          display: flex;
+          flex-direction: column;
+
+          margin: 20px 0 0 0;
+
+          & * {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.3;
+          }
+        }
+      }
+
+      // restaurant__visit__place__container
+      &__container {
+        display: flex;
+        align-items: center;
+
+        position: relative;
+        height: inherit;
+
+        &:hover {
+          cursor: pointer;
+
+          &::before {
+            transform: translateX(0%);
+          }
+          &::after {
+            transform: translateX(0%);
+          }
+        }
+
+        &::before {
+          content: "";
+          width: 80px;
+          height: 2px;
+          background: #fff;
+
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          transform: translateX(-50%);
+          transition: transform 0.4s ease-in-out;
+        }
+        &::after {
+          content: "";
+          width: 80px;
+          height: 2px;
+          background: #d41212;
+
+          position: absolute;
+          bottom: 0;
+          right: 0;
+
+          transform: translateX(50%);
+          transition: transform 0.4s ease-in-out;
+        }
+
+        // restaurant__visit__place__container__img
+        &__img {
+          height: 176px;
+          width: 300px;
+          background-size: cover;
+          background-position: center;
+
+          position: relative;
+          z-index: 2;
+
+          box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+        }
+      }
+    }
+
+    // restaurant__visit__btn
+    &__btn {
+      background: none;
+      border: none;
+
+      margin: 5vh 0 0 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
